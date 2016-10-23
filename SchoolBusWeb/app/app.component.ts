@@ -1,7 +1,19 @@
-import { Component } from '@angular/core';
+import {Component} from "@angular/core";
+import {Auth} from "./auth.service";
+
 
 @Component({
-    selector: 'my-app',
-    template: '<h1>My First Angular App</h1>'
+  selector: 'my-app',
+  providers: [ Auth ],
+  templateUrl: 'app/app.template.html'
+
 })
-export class AppComponent { }
+
+
+
+
+export class AppComponent {
+
+}
+
+

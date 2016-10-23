@@ -1,11 +1,12 @@
 /* tslint:disable:no-unused-variable */
-import { AppComponent } from './app.component';
+import {AppComponent} from "./app.component";
+import {TestBed} from "@angular/core/testing";
+import {By} from "@angular/platform-browser";
 
-import { TestBed }      from '@angular/core/testing';
-
-import { By }           from '@angular/platform-browser';
 
 ////////  SPECS  /////////////
+
+
 
 /// Delete this
 describe('Smoke test', () => {
@@ -13,6 +14,9 @@ describe('Smoke test', () => {
     expect(true).toEqual(true, 'should pass');
   });
 });
+
+
+
 
 describe('AppComponent with TCB', function () {
   beforeEach(() => {
@@ -35,3 +39,4 @@ describe('AppComponent with TCB', function () {
     expect(h1.innerText).toMatch(/angular app/i, '<h1> should say something about "Angular App"');
   });
 });
+
