@@ -2,7 +2,7 @@
  * Created by Madeleine on 2016-10-22.
  */
 import {Component} from "@angular/core";
-import {Auth} from "./auth.service";
+import {Auth} from "./autho/auth.service";
 
 @Component({
   selector: 'home',
@@ -15,7 +15,6 @@ import {Auth} from "./auth.service";
      
      <button style="margin-top: 15px" class="btn btn-info btn-margin btn-block" [routerLink]="['register']">New parent? Register here</button>
    </div>
-
   `
 })
 

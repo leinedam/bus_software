@@ -7,7 +7,7 @@ import {Component} from "@angular/core";
 @Component({
   selector: 'register',
 //  template: '<register></register>'
-  templateUrl: 'app/register.template.html',
+  templateUrl: 'app/template/register.template.html',
 
 })
 
