@@ -1,14 +1,16 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {AUTH_PROVIDERS} from "angular2-jwt";
-import {AppComponent} from "./app.component";
-import {HomeComponent} from "./home.component";
-import {LoginComponent} from "./login.component";
-import {RegisterComponent} from "./register.component";
-
 import {routing, appRoutingProviders} from "./app.routes";
-import { AgmCoreModule } from 'angular2-google-maps/core';
+import {AUTH_PROVIDERS} from "angular2-jwt";
+import {Auth} from "./components/services/auth.service";
+import {AuthGuard}  from "./auth.guard";
+import {AppComponent} from "./app.component";
+
+import {HomeComponent} from "./components/home/home.component";
+import {ProfileComponent} from "./components/profile/profile.component";
+import {RegisterComponent} from "./components/registration/register.component";
+//import { AgmCoreModule } from 'angular2-google-maps/core';
 //import {ANGULAR2_GOOGLE_MAPS_PROVIDERS} from 'angular2-google-maps/core';
 
 
@@ -23,12 +25,15 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
   providers:    [
     appRoutingProviders,
     AUTH_PROVIDERS,
+    Auth,
+    AuthGuard
   ],
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
+    ProfileComponent,
     RegisterComponent,
+
   ],
   bootstrap:    [AppComponent],
 })

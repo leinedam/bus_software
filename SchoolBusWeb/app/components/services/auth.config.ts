@@ -1,4 +1,7 @@
 /**
+ * Created by Madeleine on 2016-11-05.
+ */
+/**
  * Created by Madeleine on 2016-10-22.
  */
 interface AuthConfiguration {
