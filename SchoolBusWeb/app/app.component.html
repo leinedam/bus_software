@@ -33,6 +33,11 @@
 </nav>
 
 <div class="login-background" *ngIf="!auth.authenticated()">
+
+  <div class="login-container">
+    <register></register>
+  </div>
+
   <div class="container">
 
       <router-outlet></router-outlet>
@@ -42,12 +47,16 @@
 
 
 <div class="" *ngIf="auth.authenticated()">
+
+ <h2> Map goes here</h2>
+
   <div class="container">
-
     <router-outlet></router-outlet>
-
 
   </div><!-- /.container -->
 </div>
+
+
+
 
 
