@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default">
   <div class="container">
 
     <div class="navbar-header">
@@ -8,51 +8,37 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Bus Tracker</a>
+      <a routerLink="/" class="navbar-brand" >Bus Tracker</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a routerLink="/" *ngIf="auth.authenticated()">Home</a></li>
-      </ul>
+
 
       <ul class="nav navbar-nav navbar-right">
 
-        <li><input type="text" id="name1" class="form-login-custom" #username placeholder="yours@example.com"> </li>
-        <li> <input type="password" id="password1" class="form-login-custom" #password placeholder="your password"> </li>
-        <li> <button type="submit"  style="margin-left: 73%; margin-bottom: 20px" class="btn btn-secondary btn-margin" (click)="auth.login(username.value, password.value)">Login</button></li>
-
-
+        <!--   <li><input type="text" id="name1" class="form-login-custom" #username placeholder="yours@example.com"> </li>
+         <li> <input type="password" id="password1" class="form-login-custom" #password placeholder="your password"> </li>
+          <li> <button type="submit"  style="margin-left: 15%; margin-top: 10px" class="btn btn-secondary" (click)="auth.login(username.value, password.value)">Login</button></li> -->
         <li><a href="#" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</a></li>
         <li><a routerLink="/profile" *ngIf="auth.authenticated()">Profile</a></li>
         <li><a href="#" (click)="auth.logout()"  *ngIf="auth.authenticated()">Log Out</a></li>
 
       </ul>
     </div><!--/.nav-collapse -->
-
   </div>
 </nav>
 
 <div class="login-background" *ngIf="!auth.authenticated()">
-
-  <div class="login-container">
-    <register></register>
-  </div>
-
   <div class="container">
-
       <router-outlet></router-outlet>
-
-  </div><!-- /.container -->
+  </div>
 </div>
 
 
 <div class="" *ngIf="auth.authenticated()">
-
- <h2> Map goes here</h2>
-
+  <h2> Map goes here</h2>
+  <side></side>
   <div class="container">
     <router-outlet></router-outlet>
-
   </div><!-- /.container -->
 </div>
 

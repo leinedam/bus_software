@@ -2,12 +2,15 @@
  * Created by Madeleine on 2016-10-25.
  */
 import { Component } from '@angular/core';
+import {SebmGoogleMap} from 'angular2-google-maps/core';
 
 @Component({
   selector: 'map-root',
+  providers: [SebmGoogleMap],
   styles: [
     `.sebm-google-map-container {
          height: 300px;
+         width: 300px;
        }`
   ],
   template: `

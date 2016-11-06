@@ -44,3 +44,30 @@
   padding: 5px;
   border: 1px solid #ccc;
 }
+.profilepanel
+{
+  position: absolute;
+  width: 70%;
+  max-height: 900px;
+  background-color: #E6E7E8;
+  padding: 45px;
+  border-radius: 7px;
+
+}
+.sidePanel
+{
+  width: 420px;
+  height: 100%;
+  float: left;
+  background-color: white;
+  border-right: solid gray 1px;
+  padding: 15px;
+
+}
+.currenttime{
+  width: 420px;
+  position: absolute;
+  background-color: yellow;
+  padding: 10px;
+  margin-left: -15px;
+}

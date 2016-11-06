@@ -10,8 +10,8 @@ import {AppComponent} from "./app.component";
 import {HomeComponent} from "./components/home/home.component";
 import {ProfileComponent} from "./components/profile/profile.component";
 import {RegisterComponent} from "./components/registration/register.component";
+import {SideComponent} from "./components/sidePanel/sidepanel.component";
 //import { AgmCoreModule } from 'angular2-google-maps/core';
-//import {ANGULAR2_GOOGLE_MAPS_PROVIDERS} from 'angular2-google-maps/core';
 
 
 @NgModule({
@@ -26,13 +26,14 @@ import {RegisterComponent} from "./components/registration/register.component";
     appRoutingProviders,
     AUTH_PROVIDERS,
     Auth,
-    AuthGuard
+    AuthGuard,
   ],
   declarations: [
     AppComponent,
     HomeComponent,
     ProfileComponent,
     RegisterComponent,
+    SideComponent,
 
   ],
   bootstrap:    [AppComponent],
