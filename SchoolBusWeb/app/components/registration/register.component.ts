@@ -27,6 +27,9 @@ export class RegisterComponent {
     this.active = false;
     setTimeout(() => this.active = true, 0);
   }
+
+
+
   showFormControls(form: any) {
 
     return form && form.controls['name'] &&
