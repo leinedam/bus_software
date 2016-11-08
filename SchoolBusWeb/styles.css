@@ -7,9 +7,9 @@
 
 .login-container
 {
-  max-width: 350px;
+  max-width: 450px;
   background-color: whitesmoke;
-  padding: 15px;
+  padding: 20px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
@@ -21,10 +21,21 @@
   margin-top: 0px;
   height: 130%;
   background-color: #442c2c;
-  background-image: url("app/images/schoolbus.jpg");
+  background-image: url("app/sources/schoolbus.jpg");
   background-size: cover;
   padding: 5px;
   margin: -30px;
+}
+
+.map-background
+{
+  margin-top: 0px;
+  height: 100%;
+  background-color: #442c2c;
+  background-image: url("app/sources/map.jpg");
+  background-size: cover;
+  padding: 5px;
+  margin-top: -30px;
 }
 .form-login-custom
 {
@@ -34,6 +45,7 @@
   padding: 5px;
   margin-top: 15px;
   border: 1px solid #ccc;
+
 }
 
 .form-registration-custom
@@ -46,16 +58,18 @@
 }
 .profilepanel
 {
+  margin-top: 5%;
   position: absolute;
   width: 70%;
   max-height: 900px;
-  background-color: #E6E7E8;
-  padding: 45px;
+  background-color: #fff;
+  padding: 35px;
   border-radius: 7px;
 
 }
 .sidePanel
 {
+  position: absolute;
   width: 420px;
   height: 100%;
   float: left;
@@ -70,4 +84,16 @@
   background-color: yellow;
   padding: 10px;
   margin-left: -15px;
+}
+
+.calendarpanel
+{
+  margin-top: 4%;
+  position: absolute;
+  width: 70%;
+  max-height: 900px;
+  padding: 25px;
+  border-radius: 7px;
+  background-color: #fff;
+  float: left;
 }

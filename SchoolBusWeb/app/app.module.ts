@@ -11,6 +11,7 @@ import {HomeComponent} from "./components/home/home.component";
 import {ProfileComponent} from "./components/profile/profile.component";
 import {RegisterComponent} from "./components/registration/register.component";
 import {SideComponent} from "./components/sidePanel/sidepanel.component";
+import {CalendarComponent} from "./components/calendar/calendar.component";
 //import { AgmCoreModule } from 'angular2-google-maps/core';
 
 
@@ -34,6 +35,7 @@ import {SideComponent} from "./components/sidePanel/sidepanel.component";
     ProfileComponent,
     RegisterComponent,
     SideComponent,
+    CalendarComponent,
 
   ],
   bootstrap:    [AppComponent],

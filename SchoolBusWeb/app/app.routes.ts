@@ -8,13 +8,15 @@ import {HomeComponent} from "./components/home/home.component";
 import {ProfileComponent} from "./components/profile/profile.component";
 import {RegisterComponent} from "./components/registration/register.component";
 import {SideComponent} from "./components/sidePanel/sidepanel.component";
+import {CalendarComponent} from "./components/calendar/calendar.component";
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'register', component: RegisterComponent },
   { path: 'side', component: SideComponent },
-  { path: '**', redirectTo: '' }
+  { path: 'calendar', component: CalendarComponent },
+  //{ path: '**', redirectTo: '' }
 
 ];
 

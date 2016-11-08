@@ -2,40 +2,116 @@
   <div class="row">
     <div class="col-md-12">
 
-      <h4>New Parent? Register here</h4>
-      <form>
+      <h3>New Parent?</h3>
+      <h4>Register here</h4>
+  <div  [hidden]="submitted">
 
-        <div class="form-group">
-          <label for="name">Username</label>
-          <input type="text" id="name" class="form-registration-custom" #username placeholder="yours@example.com">
+    <form *ngIf="active" (ngSubmit)="onSubmit()" #heroForm="ngForm">
 
-          <label for="password">Password</label>
-          <input type="password" id="password" class="form-registration-custom" #password placeholder="your password">
+      <table class="table">
+        <tr>
+          <th><label for="name">Name</label></th>
+          <th> <div class="form-group">
+            <input type="text" class="form-registration-custom" id="name" required
+                   [(ngModel)]="model.name" name="name"
+                   #name="ngModel" >
+            <div [hidden]="name.valid || name.pristine"
+                 class="alert alert-danger">
+              Name is required
+            </div>
+          </div></th>
+        </tr>
 
-          <label for="email">E-mail</label>
-          <input type="email" id="email" class="form-registration-custom" #password placeholder="your e-mail">
+        <tr>
+          <td> <label for="email">e-mail</label></td>
+          <td>
+            <div class="form-group">
+              <input type="email" class="form-registration-custom" id="email" required
+                     [(ngModel)]="model.email" name="email" >
+            </div>
+          </td>
+        </tr>
 
-          <label for="address">Address</label>
-          <input type="text" id="address" class="form-registration-custom" #password placeholder="Address">
-        </div>
 
-        <hr>
+        <tr>
+          <td> <label for="password">Password</label></td>
+          <td>
+            <div class="form-group">
+              <input type="password" class="form-registration-custom" id="password" required
+                     [(ngModel)]="model.password" name="password" >
+            </div>
+          </td>
+        </tr>
 
-        <div class="form-group">
-          <label for="numberOfKids">Number of Kids</label>
-          <select class="form-control" id="numberOfKids">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-          </select>
-        </div>
+        <tr>
+        <td> <label for="address">address</label></td>
+        <td>
+          <div class="form-group">
+            <input type="address" class="form-registration-custom" id="address" required
+                   [(ngModel)]="model.address" name="address" >
+          </div>
+        </td>
+      </tr>
 
-        <button type="submit" class="btn btn-info btn-margin btn-block">Save</button>
-      </form>
+        <tr>
+          <td> <label for="kids">Kids</label></td>
+          <td><div class="form-group">
+            <select class="form-registration-custom" id="kids" required
+                    [(ngModel)]="model.kids" name="kids"
+                    #kids="ngModel" >
+              <option *ngFor="let p of kidsNumber" [value]="p">{{p}}</option>
+            </select>
+            <div [hidden]="kids.valid || kids.pristine" class="alert alert-danger">
+              kids are required
+            </div>
+          </div></td>
+        </tr>
+
+      </table>
+
+
+
+
+      <button type="submit" class="btn btn-default" [disabled]="!heroForm.form.valid">Submit</button>
+
+      <button type="button" class="btn btn-default" (click)="newHero()">New Parent</button>
+
+      <!-- NOT SHOWN IN DOCS -->
+      <div>
+
+        Name via form.controls = {{showFormControls(heroForm)}}
+      </div>
+      <!-- - -->
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h2>You submitted the following:</h2>
+    <div class="row">
+      <div class="col-xs-3">Name</div>
+      <div class="col-xs-9  pull-left">{{ model.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">email</div>
+      <div class="col-xs-9 pull-left">{{ model.email }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">password</div>
+      <div class="col-xs-9 pull-left">{{ model.password }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Address</div>
+      <div class="col-xs-9 pull-left">{{ model.address }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Kids</div>
+      <div class="col-xs-9 pull-left">{{ model.kids }}</div>
+    </div>
+    <br>
+    <button class="btn btn-default" (click)="submitted=false">Edit</button>
+  </div>
+
+
     </div>
   </div>
 
