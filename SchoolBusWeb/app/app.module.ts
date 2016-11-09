@@ -13,7 +13,7 @@ import {RegisterComponent} from "./components/registration/register.component";
 import {SideComponent} from "./components/sidePanel/sidepanel.component";
 import {CalendarComponent} from "./components/calendar/calendar.component";
 //import { AgmCoreModule } from 'angular2-google-maps/core';
-
+import {Now} from "./components/sidePanel/Now";
 
 @NgModule({
   imports:      [
@@ -36,7 +36,7 @@ import {CalendarComponent} from "./components/calendar/calendar.component";
     RegisterComponent,
     SideComponent,
     CalendarComponent,
-
+    Now
   ],
   bootstrap:    [AppComponent],
 })

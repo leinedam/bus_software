@@ -80,10 +80,10 @@
 }
 .currenttime{
   width: 420px;
-  position: absolute;
-  background-color: yellow;
-  padding: 10px;
+  padding: 0.4px;
   margin-left: -15px;
+  background-color: yellow;
+  text-align: center;
 }
 
 .calendarpanel

@@ -13,6 +13,10 @@ import { Auth } from "../services/auth.service";
 export class SideComponent {
   constructor(private auth: Auth) {}
 
+  kids=[{name:'made',bus:'Aasd3123'},
+        {name:'Jhon',bus:'00Ids'}]
+
+
 }
 
 

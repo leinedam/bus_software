@@ -4,21 +4,17 @@
     <table class="table">
       <tr>
         <th>Name</th>
-        <th>Bus ID</th>
+        <th>Bus</th>
       </tr>
-      <tr>
-        <td>Jill</td>
-        <td>50</td>
-      </tr>
-      <tr>
-        <td>Eve</td>
-        <td>94</td>
+      <tr *ngFor="let kid of kids">
+        <td>{{kid.name}}</td>
+        <td>{{kid.bus}}</td>
       </tr>
     </table>
 
   <!-- Time -->
 <div class="currenttime">
-Tuesday
+  <now></now>
 </div>
 
   <!-- buses information -->
