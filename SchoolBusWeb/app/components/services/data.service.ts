@@ -6,7 +6,6 @@ import {Http, Headers} from "@angular/http";
 import {Injectable} from "@angular/core";
 import 'rxjs/add/operator/map'
 
-
 @Injectable()
 export class DataService {
 
@@ -14,6 +13,12 @@ export class DataService {
 
   getCurrentTime(){
       return this.http.get('http://ip.jsontest.com/')
+  }
+
+  getKids(){
+    return this.http.get('https://my-project-1477365823828.firebaseio.com/.json').map(
+      (res) => res.json()
+    );
   }
 
   postJSON(){

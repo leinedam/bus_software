@@ -16,6 +16,7 @@ import {CalendarComponent} from "./components/calendar/calendar.component";
 import {Now} from "./components/sidePanel/Now";
 import {HTTPTestComponent} from "./components/services/testdata.component";
 import { HttpModule } from '@angular/http';
+import {HTTPKidsComponent} from "./components/sidePanel/kids.component";
 
 @NgModule({
   imports:      [
@@ -40,6 +41,7 @@ import { HttpModule } from '@angular/http';
     SideComponent,
     CalendarComponent,
     HTTPTestComponent,
+    HTTPKidsComponent,
     Now
   ],
   bootstrap:    [AppComponent],
