@@ -9,10 +9,10 @@ import {DataService} from "../services/data.service";
   selector : 'http-kids',
   providers:[DataService],
   template: ` 
-     <table class="table">
+     <table class="kidstable">
       <tr>
-        <th>Name</th>
-        <th>Bus</th>
+        <td><h3>KID NAME</h3></td>
+        <td><h3>BUS ID</h3></td>
       </tr>
       <tr *ngFor="let kid of kids">
         <td>{{kid.name}}</td>

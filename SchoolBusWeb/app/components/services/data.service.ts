@@ -1,7 +1,6 @@
 /**
  * Created by Madeleine on 2016-11-08.
  */
-
 import {Http, Headers} from "@angular/http";
 import {Injectable} from "@angular/core";
 import 'rxjs/add/operator/map'
@@ -17,6 +16,12 @@ export class DataService {
 
   getKids(){
     return this.http.get('https://my-project-1477365823828.firebaseio.com/.json').map(
+      (res) => res.json()
+    );
+  }
+
+  getBuses(){
+    return this.http.get('https://buses-2d5c5.firebaseio.com/.json').map(
       (res) => res.json()
     );
   }

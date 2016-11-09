@@ -1,0 +1,18 @@
+[
+  {
+    "id":"1RFS",
+    "deviceId":"EdmontonTravelLog1",
+    "latitude":"53.554025659",
+    "longitude":"-113.473179333",
+    "speed":"0.036",
+    "time":"21 Jul 2016 15:49:45.088"
+  },
+  {
+    "id":"2FST",
+    "deviceId":"TorontoTravelLog2",
+    "latitude":"23.551025659",
+    "longitude":"-123.473179333",
+    "speed":"0.076",
+    "time":"22 Jul 2016 11:42:25.028"
+  }
+]

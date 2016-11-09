@@ -58,6 +58,7 @@
 }
 .profilepanel
 {
+  position: absolute;
   margin-top: 5%;
   position: absolute;
   width: 70%;
@@ -69,7 +70,6 @@
 }
 .sidePanel
 {
-  position: absolute;
   width: 420px;
   height: 100%;
   float: left;
@@ -80,10 +80,10 @@
 }
 .currenttime{
   width: 420px;
-  padding: 0.4px;
   margin-left: -15px;
   background-color: yellow;
   text-align: center;
+  margin-top: 35px;
 }
 
 .calendarpanel
@@ -97,3 +97,30 @@
   background-color: #fff;
   float: left;
 }
+.bustable{
+
+  border-bottom: solid #cccccc 1px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.bustable>tbody>tr>td{
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+}
+
+.kidstable{
+
+  margin-bottom: 20px;
+  width: 100%;
+}
+.kidstable>tbody>tr>td
+{
+  border-bottom: solid #cccccc 1px;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+}
+
