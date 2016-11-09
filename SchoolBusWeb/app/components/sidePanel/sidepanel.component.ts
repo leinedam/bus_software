@@ -16,7 +16,6 @@ export class SideComponent {
   kids=[{name:'made',bus:'Aasd3123'},
         {name:'Jhon',bus:'00Ids'}]
 
-
 }
 
 

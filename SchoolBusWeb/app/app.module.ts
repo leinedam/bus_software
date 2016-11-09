@@ -14,6 +14,8 @@ import {SideComponent} from "./components/sidePanel/sidepanel.component";
 import {CalendarComponent} from "./components/calendar/calendar.component";
 //import { AgmCoreModule } from 'angular2-google-maps/core';
 import {Now} from "./components/sidePanel/Now";
+import {HTTPTestComponent} from "./components/services/testdata.component";
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports:      [
@@ -21,6 +23,7 @@ import {Now} from "./components/sidePanel/Now";
     routing,
     FormsModule,
     ReactiveFormsModule,
+    HttpModule,
    // AgmCoreModule.forRoot({apiKey: 'AIzaSyCdCfA5HSxnEiM7X7CTX4fp9y620nkdeRE'})
   ],
   providers:    [
@@ -36,6 +39,7 @@ import {Now} from "./components/sidePanel/Now";
     RegisterComponent,
     SideComponent,
     CalendarComponent,
+    HTTPTestComponent,
     Now
   ],
   bootstrap:    [AppComponent],
