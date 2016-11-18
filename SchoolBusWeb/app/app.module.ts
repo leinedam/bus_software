@@ -18,6 +18,7 @@ import {HTTPTestComponent} from "./components/services/testdata.component";
 import { HttpModule } from '@angular/http';
 import {HTTPKidsComponent} from "./components/sidePanel/kids.component";
 import {HTTPBusComponent} from "./components/sidePanel/businfo.component";
+import { CalendarModule } from "angular-calendar";
 
 @NgModule({
   imports:      [
@@ -26,7 +27,8 @@ import {HTTPBusComponent} from "./components/sidePanel/businfo.component";
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-   // AgmCoreModule.forRoot({apiKey: 'AIzaSyCdCfA5HSxnEiM7X7CTX4fp9y620nkdeRE'})
+    CalendarModule.forRoot()
+    // AgmCoreModule.forRoot({apiKey: 'AIzaSyCdCfA5HSxnEiM7X7CTX4fp9y620nkdeRE'})
   ],
   providers:    [
     appRoutingProviders,
@@ -52,6 +54,8 @@ export class AppModule {
   constructor() {
   }
 }
+
+
 
 
 
