@@ -1,6 +1,6 @@
 /**
  * Created by Madeleine on 2016-10-25.
- */
+
 import { Component } from '@angular/core';
 import {SebmGoogleMap} from 'angular2-google-maps/core';
 
@@ -15,9 +15,9 @@ import {SebmGoogleMap} from 'angular2-google-maps/core';
   ],
   template: `
     <h1>My First angular2-google-maps App</h1>
-    
+
     <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-    
+
     </sebm-google-map>
     `
 })
@@ -27,3 +27,4 @@ export class MapComponent {
   lng: number = 7.809007;
   zoom: number = 8; // initial zoom of the map
 }
+ */
