@@ -11,8 +11,12 @@
 <h1 *ngIf="!auth.authenticated()" style="color: white">Welcome</h1>
 <div class="alert alert-danger" *ngIf="!auth.authenticated()">You are not logged in</div>
 
+
+
+
   <div class="login-container" *ngIf="!auth.authenticated()">
     <register></register>
   </div>
 </div>
+
 
