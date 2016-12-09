@@ -81,22 +81,29 @@ export class CalendarComponent implements OnInit{
   refresh: Subject<any> = new Subject();
 
   events: CalendarEvent[] = [{
-    start: subDays(startOfDay(new Date()), 1),
-    end: addDays(new Date(), 1),
-    title: 'id bus',
+    start:  subMonths(startOfDay(new Date()), 12),
+    end: addMonths(new Date(), 12),
+    title: 'Bus 1 ID' +
+    '<br> Arrival: 2:00 pm' +
+    '<br> Kid: Jhon' +
+    '<br> Stop: 2',
     color: colors.red,
     actions: this.actions
   }, {
-    start: startOfDay(new Date()),
-    title: 'BUS ID 2',
+    start: subMonths(startOfDay(new Date()), 12),
+    end: addMonths(new Date(), 12),
+    title: 'Bus 2 ID' +
+    '<br> Arrival: 2:30 pm' +
+    '<br> Kid: Anne' +
+    '<br> Stop: 2',
     color: colors.yellow,
     actions: this.actions
-  }, {
-    start: subDays(endOfMonth(new Date()), 3),
-    end: addDays(endOfMonth(new Date()), 3),
-    title: 'A long event that spans 2 months',
-    color: colors.blue
-  }, {
+  },/* {
+   start: subDays(endOfMonth(new Date()), 3),
+   end: addDays(endOfMonth(new Date()), 31),
+   title: 'A long event that spans 2 months',
+   color: colors.blue
+   }, */{
     start: addHours(startOfDay(new Date()), 2),
     end: new Date(),
     title: 'BUS ID 3',

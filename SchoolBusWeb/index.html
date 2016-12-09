@@ -21,23 +21,24 @@
   <script src="node_modules/zone.js/dist/zone.js"></script>
   <script src="node_modules/reflect-metadata/Reflect.js"></script>
   <script src="node_modules/systemjs/dist/system.src.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="systemjs.config.js"></script>
   <script>
     System.import('app').catch(function(err){ console.error(err); });
   </script>
+  <script src="JsMap/map.js"></script>
+
 </head>
-
-<body>
 <base href="/">
+<body>
 
-<div id="map" class="mapa" ></div>
-<script src="e2e/map.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUOK9XReUHlmVw-V59T-XvvpCSD1h1nwc&signed_in=true&callback=initMap"></script>
-
-<my-app><div class="back-login"><h1 class="loading">Loading...</h1></div></my-app>
-
+<div id="map" class="mapa" ></div><div id="right-panel">
+  <strong> Information</strong>
+  <div id="output"></div>
+</div>
+<my-app><div class="back-login">Loading...</div></my-app>
 
 </body>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyDUOK9XReUHlmVw-V59T-XvvpCSD1h1nwc" async defer></script>
 </html>
 
